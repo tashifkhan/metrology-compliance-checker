@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import PageLayout from "../../components/PageLayout";
 import FilterButton from "../../components/FilterButton";
@@ -17,7 +17,8 @@ const MapHeatmapPage: React.FC = () => {
 	const [regionSearch, setRegionSearch] = useState("");
 	const [mapSearch, setMapSearch] = useState("");
 	const [zoomLevel, setZoomLevel] = useState(1);
-	const mapRef = useRef<HTMLDivElement>(null);
+	// mapRef was removed because it was not used. Keep this comment in case
+	// a DOM ref is needed in future.
 
 	// Mock heatmap data
 	const heatmapData: HeatmapData[] = [
